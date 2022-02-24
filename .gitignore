@@ -1,0 +1,11 @@
+venv
+.idea
+*db.sqlite3
+.env
+*.log
+logs
+main.py
+**__pycache__
+static
+*.pyc
+*.pyo
