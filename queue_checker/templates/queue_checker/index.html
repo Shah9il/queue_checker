@@ -9,17 +9,17 @@
 <body>
     <form action="" method="POST">
     {% csrf_token %}
-    <label for="refresh_time_in_min">Refresh Page:</label><br>
-    <input type="text" id="refresh_time_id" name="refresh_time_name" value="1"><br>
-    <input type="submit" value="Submit">
+    <label for="refresh_time_in_min">Refresh Page: (Or after 1 minute it will refresh automatically) </label>
+    <input type="text" id="refresh_time_id" name="refresh_time_name" value="{{refresh_in_min}}" hidden>
+    <input type="submit" value="Refresh">
     </form>
     <table class="table table-striped table-hover align-middle">
         {%if list%}
             <thead>
                 <tr>
-                    <th scope="col">Timestamp</th>
+                    <th scope="col">Provider Name</th>
                     <th scope="col">Protocol</th>
-                    <th scope="col">Provider ID</th>
+<!--                    <th scope="col">Provider ID</th>-->
                     <th scope="col">SMS Queue</th>
                     <th scope="col">Campaign Queue</th>
                 </tr>
