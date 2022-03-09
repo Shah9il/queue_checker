@@ -15,6 +15,7 @@ pip install -r requirements.txt
 
 ## Environment Configuration:
 - Use DJANGO_ENV as `TEST` or `LIVE`
+- Assign strong security key in `SECRET_KEY` variable 
 - LOG_DATE_FORMAT `'%Y%m%d %H:%M:%S:%f'` to parse the date format from the log file to be shown
 - CURRENT_WORKING_DIRECTORY `'SCRIPT_PATH/py3scripts'`
 - SCRIPT_LOCATION `'SCRIPT_PATH/py3scripts'`
