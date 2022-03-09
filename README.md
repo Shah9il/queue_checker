@@ -16,10 +16,10 @@ pip install -r requirements.txt
 ## Environment Configuration:
 - Use DJANGO_ENV as `TEST` or `LIVE`
 - LOG_DATE_FORMAT `'%Y%m%d %H:%M:%S:%f'` to parse the date format from the log file to be shown
-- CURRENT_WORKING_DIRECTORY `'/usr/local/src/py3scripts'`
-- SCRIPT_LOCATION `'/usr/local/src/py3scripts'`
-- SMS_SERVER_LOG_FILE `'/usr/local/SMSServer/debug.log'`
-- FILTERED_LOG_FILE `'/usr/local/src/py3scripts/debug.log'`
+- CURRENT_WORKING_DIRECTORY `'SCRIPT_PATH/py3scripts'`
+- SCRIPT_LOCATION `'SCRIPT_PATH/py3scripts'`
+- SMS_SERVER_LOG_FILE `'LOG_FILE_LOCATION/debug.log'`
+- FILTERED_LOG_FILE `'SCRIPT_PATH/py3scripts/debug.log'`
 - LINE_COUNT `100000`
 - ITELBILLING_DBNAME `SMSDB`
 - DBNAME `'queue_checker_db'`
