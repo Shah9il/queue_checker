@@ -4,15 +4,24 @@ from .log_file_processor import copy_log_file, filter_log, time_filtered_info, g
 import logging
 from datetime import datetime
 from dotenv import load_dotenv
+import socket
 
 load_dotenv()
 logger = logging.getLogger(__name__)
+
+hostname = socket.gethostname()
 
 LINE_COUNT = os.getenv('LINE_COUNT')
 DJANGO_ENV = os.getenv('DJANGO_ENV')
 
 
 def index(request):
+    if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+        logger.debug('Client IP: ' + request.environ['REMOTE_ADDR'])
+    else:
+        logger.debug('Client IP: ' + request.environ['HTTP_X_FORWARDED_FOR'])
+    # ip_address = socket.gethostbyname(hostname)
+    # logger.debug('Client IP: ' + ip_address)
     refresh_time = 1
     if request.POST:
         refresh_time = request.POST['refresh_time_name']
